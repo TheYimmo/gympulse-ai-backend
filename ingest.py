@@ -1,8 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-# 1. PEGA AQUÍ TU URL EXTERNA DE RENDER
-# Debe empezar con postgresql:// en lugar de postgres://
+#URL
 DB_URL = "postgresql://usuario:password@host.render.com/gympulse_db"
 
 def cargar_datos():
