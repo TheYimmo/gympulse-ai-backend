@@ -1,0 +1,44 @@
+"""SCRUM-6 / SCRUM-10 — FastAPI entrypoint."""
+
+from fastapi import FastAPI
+from sqlalchemy import text
+
+from app.database import SessionLocal, init_db, ping_database
+
+app = FastAPI(title="GymPulse AI - Sprint 1", version="1.0")
+
+init_db()
+
+
+@app.get("/")
+def read_root():
+    return {
+        "proyecto": "GymPulse AI",
+        "sprint": 1,
+        "equipo": 31,
+        "estado": "Operativo",
+        "documentacion": "Navega a /docs para interactuar con la API",
+    }
+
+
+@app.get("/health")
+def health_check():
+    connected = ping_database()
+    return {
+        "status": "ok" if connected or not SessionLocal else "degraded",
+        "database": "connected" if connected else "not_configured",
+    }
+
+
+@app.get("/countries")
+def get_countries():
+    if not SessionLocal:
+        return {"error": "Base de datos no conectada"}
+
+    db = SessionLocal()
+    try:
+        result = db.execute(text("SELECT DISTINCT country FROM gym_metrics ORDER BY country")).fetchall()
+        countries = [row[0] for row in result]
+        return {"total_paises": len(countries), "countries": countries}
+    finally:
+        db.close()

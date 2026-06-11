@@ -1,0 +1,586 @@
+{
+  "jira_issue": "SCRUM-9",
+  "source_file": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/data/clean_gym_data.csv",
+  "total_registros": 3564,
+  "valores_nulos_por_columna": {
+    "country": 0,
+    "year": 0,
+    "region": 0,
+    "gym_memberships": 0,
+    "fitness_participation_rate": 0,
+    "total_health_club_revenue_usd": 0,
+    "number_of_gyms": 0,
+    "gym_penetration_rate": 0,
+    "urban_population_percentage": 0,
+    "obesity_rate": 0,
+    "gdp_per_capita_usd": 0,
+    "population_total": 0,
+    "average_membership_cost_usd": 0,
+    "insufficient_physical_activity_pct": 0
+  },
+  "valores_nulos_por_region": {
+    "gym_memberships": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "fitness_participation_rate": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "total_health_club_revenue_usd": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "number_of_gyms": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "gym_penetration_rate": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "urban_population_percentage": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "obesity_rate": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "gdp_per_capita_usd": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "population_total": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "average_membership_cost_usd": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    },
+    "insufficient_physical_activity_pct": {
+      "Africa": 0,
+      "Asia": 0,
+      "Europe": 0,
+      "North America": 0,
+      "Oceania": 0,
+      "South America": 0
+    }
+  },
+  "atipicos_iqr_por_region": {
+    "Africa": {
+      "gym_memberships": {
+        "count": 70,
+        "lower_bound": -546727.25,
+        "upper_bound": 1155470.75
+      },
+      "fitness_participation_rate": {
+        "count": 0,
+        "lower_bound": 0.15485000000000002,
+        "upper_bound": 0.55205
+      },
+      "total_health_club_revenue_usd": {
+        "count": 77,
+        "lower_bound": -32878730.75,
+        "upper_bound": 69732331.25
+      },
+      "number_of_gyms": {
+        "count": 52,
+        "lower_bound": -866.25,
+        "upper_bound": 1939.75
+      },
+      "gym_penetration_rate": {
+        "count": 8,
+        "lower_bound": -0.012300000000000002,
+        "upper_bound": 0.0369
+      },
+      "urban_population_percentage": {
+        "count": 0,
+        "lower_bound": -0.10212500000000013,
+        "upper_bound": 0.9240750000000001
+      },
+      "obesity_rate": {
+        "count": 56,
+        "lower_bound": -0.07525,
+        "upper_bound": 0.24675
+      },
+      "gdp_per_capita_usd": {
+        "count": 50,
+        "lower_bound": -2729.6701750000007,
+        "upper_bound": 6224.109625000001
+      },
+      "population_total": {
+        "count": 75,
+        "lower_bound": -23953758.0,
+        "upper_bound": 74770938.0
+      },
+      "average_membership_cost_usd": {
+        "count": 153,
+        "lower_bound": 5.0,
+        "upper_bound": 5.0
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 27,
+        "lower_bound": -0.015200000000000019,
+        "upper_bound": 0.402
+      }
+    },
+    "Asia": {
+      "gym_memberships": {
+        "count": 84,
+        "lower_bound": -3139787.5,
+        "upper_bound": 5946330.5
+      },
+      "fitness_participation_rate": {
+        "count": 0,
+        "lower_bound": 0.10947500000000004,
+        "upper_bound": 0.6220749999999999
+      },
+      "total_health_club_revenue_usd": {
+        "count": 99,
+        "lower_bound": -363296900.625,
+        "upper_bound": 672219616.375
+      },
+      "number_of_gyms": {
+        "count": 98,
+        "lower_bound": -2943.0,
+        "upper_bound": 5541.0
+      },
+      "gym_penetration_rate": {
+        "count": 34,
+        "lower_bound": -0.05442500000000002,
+        "upper_bound": 0.14297500000000002
+      },
+      "urban_population_percentage": {
+        "count": 0,
+        "lower_bound": -0.23572499999999996,
+        "upper_bound": 1.470875
+      },
+      "obesity_rate": {
+        "count": 0,
+        "lower_bound": -0.2637250000000001,
+        "upper_bound": 0.5754750000000002
+      },
+      "gdp_per_capita_usd": {
+        "count": 62,
+        "lower_bound": -25131.950974999996,
+        "upper_bound": 46437.459025
+      },
+      "population_total": {
+        "count": 100,
+        "lower_bound": -103537377.5,
+        "upper_bound": 187370488.5
+      },
+      "average_membership_cost_usd": {
+        "count": 77,
+        "lower_bound": -8.151249999999997,
+        "upper_bound": 26.918749999999996
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 0,
+        "lower_bound": -0.08486249999999998,
+        "upper_bound": 0.7052375
+      }
+    },
+    "Europe": {
+      "gym_memberships": {
+        "count": 165,
+        "lower_bound": -2618500.5,
+        "upper_bound": 4906293.5
+      },
+      "fitness_participation_rate": {
+        "count": 0,
+        "lower_bound": 0.21893749999999995,
+        "upper_bound": 0.6836375000000001
+      },
+      "total_health_club_revenue_usd": {
+        "count": 125,
+        "lower_bound": -1021911004.75,
+        "upper_bound": 1809706579.25
+      },
+      "number_of_gyms": {
+        "count": 154,
+        "lower_bound": -2288.0,
+        "upper_bound": 4360.0
+      },
+      "gym_penetration_rate": {
+        "count": 15,
+        "lower_bound": -0.03439999999999997,
+        "upper_bound": 0.25539999999999996
+      },
+      "urban_population_percentage": {
+        "count": 0,
+        "lower_bound": 0.3238500000000002,
+        "upper_bound": 1.08845
+      },
+      "obesity_rate": {
+        "count": 5,
+        "lower_bound": 0.05689999999999998,
+        "upper_bound": 0.3809
+      },
+      "gdp_per_capita_usd": {
+        "count": 36,
+        "lower_bound": -41726.20194999999,
+        "upper_bound": 95365.59164999999
+      },
+      "population_total": {
+        "count": 209,
+        "lower_bound": -20347237.0,
+        "upper_bound": 41419925.0
+      },
+      "average_membership_cost_usd": {
+        "count": 55,
+        "lower_bound": -21.128749999999997,
+        "upper_bound": 65.88125
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 3,
+        "lower_bound": -0.023187499999999972,
+        "upper_bound": 0.5359125
+      }
+    },
+    "North America": {
+      "gym_memberships": {
+        "count": 74,
+        "lower_bound": -2453942.375,
+        "upper_bound": 4637400.625
+      },
+      "fitness_participation_rate": {
+        "count": 0,
+        "lower_bound": 0.19858749999999994,
+        "upper_bound": 0.5600875000000001
+      },
+      "total_health_club_revenue_usd": {
+        "count": 75,
+        "lower_bound": -477571962.0,
+        "upper_bound": 864225032.0
+      },
+      "number_of_gyms": {
+        "count": 69,
+        "lower_bound": -1941.625,
+        "upper_bound": 3811.375
+      },
+      "gym_penetration_rate": {
+        "count": 8,
+        "lower_bound": -0.051125000000000025,
+        "upper_bound": 0.21547500000000003
+      },
+      "urban_population_percentage": {
+        "count": 0,
+        "lower_bound": 0.23897499999999994,
+        "upper_bound": 1.080775
+      },
+      "obesity_rate": {
+        "count": 6,
+        "lower_bound": 0.085125,
+        "upper_bound": 0.42012499999999997
+      },
+      "gdp_per_capita_usd": {
+        "count": 49,
+        "lower_bound": -16258.957637499998,
+        "upper_bound": 36171.5326625
+      },
+      "population_total": {
+        "count": 54,
+        "lower_bound": -21428502.0,
+        "upper_bound": 47219024.0
+      },
+      "average_membership_cost_usd": {
+        "count": 49,
+        "lower_bound": -4.95125,
+        "upper_bound": 30.158749999999998
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 20,
+        "lower_bound": 0.18278749999999996,
+        "upper_bound": 0.5088875
+      }
+    },
+    "Oceania": {
+      "gym_memberships": {
+        "count": 22,
+        "lower_bound": -1493804.75,
+        "upper_bound": 2589933.25
+      },
+      "fitness_participation_rate": {
+        "count": 0,
+        "lower_bound": -0.13427499999999998,
+        "upper_bound": 0.914325
+      },
+      "total_health_club_revenue_usd": {
+        "count": 20,
+        "lower_bound": -631821129.0,
+        "upper_bound": 1061744535.0
+      },
+      "number_of_gyms": {
+        "count": 23,
+        "lower_bound": -994.75,
+        "upper_bound": 1771.25
+      },
+      "gym_penetration_rate": {
+        "count": 0,
+        "lower_bound": -0.16110000000000002,
+        "upper_bound": 0.3589
+      },
+      "urban_population_percentage": {
+        "count": 0,
+        "lower_bound": -0.8299,
+        "upper_bound": 1.8693
+      },
+      "obesity_rate": {
+        "count": 18,
+        "lower_bound": 0.04290000000000005,
+        "upper_bound": 0.5156999999999999
+      },
+      "gdp_per_capita_usd": {
+        "count": 0,
+        "lower_bound": -51573.33625000001,
+        "upper_bound": 93919.25895000002
+      },
+      "population_total": {
+        "count": 14,
+        "lower_bound": -12333320.75,
+        "upper_bound": 22939797.25
+      },
+      "average_membership_cost_usd": {
+        "count": 0,
+        "lower_bound": -27.799999999999997,
+        "upper_bound": 66.91999999999999
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 0,
+        "lower_bound": 0.014825000000000033,
+        "upper_bound": 0.39862499999999995
+      }
+    },
+    "South America": {
+      "gym_memberships": {
+        "count": 30,
+        "lower_bound": -2467540.25,
+        "upper_bound": 4681365.75
+      },
+      "fitness_participation_rate": {
+        "count": 32,
+        "lower_bound": 0.2996875,
+        "upper_bound": 0.5579875
+      },
+      "total_health_club_revenue_usd": {
+        "count": 28,
+        "lower_bound": -295144633.0,
+        "upper_bound": 535800419.0
+      },
+      "number_of_gyms": {
+        "count": 27,
+        "lower_bound": -2465.875,
+        "upper_bound": 4761.125
+      },
+      "gym_penetration_rate": {
+        "count": 4,
+        "lower_bound": -0.012462499999999994,
+        "upper_bound": 0.11803749999999999
+      },
+      "urban_population_percentage": {
+        "count": 27,
+        "lower_bound": 0.29801249999999996,
+        "upper_bound": 1.2387125
+      },
+      "obesity_rate": {
+        "count": 0,
+        "lower_bound": 0.05086250000000003,
+        "upper_bound": 0.40436249999999996
+      },
+      "gdp_per_capita_usd": {
+        "count": 19,
+        "lower_bound": -3789.211800000001,
+        "upper_bound": 16726.6038
+      },
+      "population_total": {
+        "count": 27,
+        "lower_bound": -40761840.5,
+        "upper_bound": 80404115.5
+      },
+      "average_membership_cost_usd": {
+        "count": 19,
+        "lower_bound": 2.5775000000000006,
+        "upper_bound": 13.017499999999998
+      },
+      "insufficient_physical_activity_pct": {
+        "count": 0,
+        "lower_bound": 0.12921249999999998,
+        "upper_bound": 0.5077125
+      }
+    }
+  },
+  "resumen_estadistico": {
+    "year": {
+      "count": 3564.0,
+      "mean": 2013.0,
+      "std": 7.789973909885669,
+      "min": 2000.0,
+      "25%": 2006.0,
+      "50%": 2013.0,
+      "75%": 2020.0,
+      "max": 2026.0
+    },
+    "gym_memberships": {
+      "count": 3564.0,
+      "mean": 2376141.8675645343,
+      "std": 7129729.730637578,
+      "min": 2051.0,
+      "25%": 162852.75,
+      "50%": 510888.0,
+      "75%": 1560638.25,
+      "max": 102788066.0
+    },
+    "fitness_participation_rate": {
+      "count": 3564.0,
+      "mean": 0.39789169472502806,
+      "std": 0.087344866807121,
+      "min": 0.2047,
+      "25%": 0.3331,
+      "50%": 0.3999,
+      "75%": 0.45375,
+      "max": 0.6758
+    },
+    "total_health_club_revenue_usd": {
+      "count": 3564.0,
+      "mean": 603403955.4767115,
+      "std": 2981055668.5202336,
+      "min": 164875.0,
+      "25%": 15331290.5,
+      "50%": 55688245.0,
+      "75%": 273764086.0,
+      "max": 84861827506.0
+    },
+    "number_of_gyms": {
+      "count": 3564.0,
+      "mean": 2076.547138047138,
+      "std": 5227.710071955999,
+      "min": 3.0,
+      "25%": 205.0,
+      "50%": 556.0,
+      "75%": 1580.75,
+      "max": 62233.0
+    },
+    "gym_penetration_rate": {
+      "count": 3564.0,
+      "mean": 0.06721304713804714,
+      "std": 0.05798427589682639,
+      "min": 0.0023,
+      "25%": 0.0196,
+      "50%": 0.0522,
+      "75%": 0.0995,
+      "max": 0.3022
+    },
+    "urban_population_percentage": {
+      "count": 3564.0,
+      "mean": 0.6100072109988777,
+      "std": 0.21907149677070134,
+      "min": 0.1164,
+      "25%": 0.463475,
+      "50%": 0.63395,
+      "75%": 0.7841750000000001,
+      "max": 1.0
+    },
+    "obesity_rate": {
+      "count": 3564.0,
+      "mean": 0.18789186307519642,
+      "std": 0.10470154946731108,
+      "min": 0.0028,
+      "25%": 0.102975,
+      "50%": 0.1961,
+      "75%": 0.2594,
+      "max": 0.6124
+    },
+    "gdp_per_capita_usd": {
+      "count": 3564.0,
+      "mean": 15615.268427104376,
+      "std": 21272.3896708646,
+      "min": 109.5938,
+      "25%": 2011.0575,
+      "50%": 5830.2126499999995,
+      "75%": 21455.622900000002,
+      "max": 137781.6817
+    },
+    "population_total": {
+      "count": 3564.0,
+      "mean": 51855357.84343434,
+      "std": 165786028.07723096,
+      "min": 181685.0,
+      "25%": 4467102.5,
+      "50%": 12103493.5,
+      "75%": 38031099.0,
+      "max": 1450935791.0
+    },
+    "average_membership_cost_usd": {
+      "count": 3564.0,
+      "mean": 14.371562850729518,
+      "std": 14.064816251454541,
+      "min": 5.0,
+      "25%": 5.06,
+      "50%": 8.055,
+      "75%": 17.7925,
+      "max": 90.92
+    },
+    "insufficient_physical_activity_pct": {
+      "count": 3564.0,
+      "mean": 0.2720705667789001,
+      "std": 0.11844361503158353,
+      "min": 0.027,
+      "25%": 0.188,
+      "50%": 0.2501,
+      "75%": 0.34502499999999997,
+      "max": 0.6614
+    }
+  },
+  "regiones": [
+    "Africa",
+    "Asia",
+    "Europe",
+    "North America",
+    "Oceania",
+    "South America"
+  ],
+  "paises": 132
+}

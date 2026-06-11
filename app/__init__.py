@@ -1,0 +1,1 @@
+"""GymPulse AI — FastAPI application."""

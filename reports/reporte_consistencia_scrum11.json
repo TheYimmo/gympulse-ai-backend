@@ -1,0 +1,67 @@
+{
+  "jira_issue": "SCRUM-11",
+  "subtask": "SCRUM-28",
+  "generated_at": "2026-06-11T03:31:41.664388+00:00",
+  "source": {
+    "file": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/data/clean_gym_data.csv",
+    "total_records": 3564,
+    "unique_countries": 132,
+    "unique_regions": 6,
+    "year_min": 2000,
+    "year_max": 2026
+  },
+  "consistency": {
+    "expected_years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "expected_cells_country_year": 3564,
+    "cells_with_exactly_one_record": 3564,
+    "missing_cells": 0,
+    "duplicate_cells": 0,
+    "coverage_percent": 100.0,
+    "integrity_status": "PASS",
+    "gaps": [],
+    "duplicates": []
+  },
+  "cross_reference_scrum9": {
+    "file": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/reports/reporte_calidad_scrum9.json",
+    "total_registros": 3564,
+    "nulos_globales": 0
+  },
+  "outputs": {
+    "matrix_csv": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/reports/matriz_consistencia_scrum11.csv",
+    "summary_json": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/reports/reporte_consistencia_scrum11.json"
+  },
+  "po_approval": {
+    "reviewer": "Carlos Pano Hernández (PO)",
+    "status": "pending",
+    "approved_at": null,
+    "notes": "PO debe revisar gaps/duplicados y aprobar en SCRUM-11 antes de Sprint 2."
+  }
+}
