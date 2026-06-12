@@ -1,6 +1,6 @@
 """SCRUM-6 / SCRUM-10 — FastAPI entrypoint."""
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 
 from app.database import SessionLocal, init_db, ping_database
@@ -40,5 +40,37 @@ def get_countries():
         result = db.execute(text("SELECT DISTINCT country FROM gym_metrics ORDER BY country")).fetchall()
         countries = [row[0] for row in result]
         return {"total_paises": len(countries), "countries": countries}
+    finally:
+        db.close()
+
+
+@app.get("/metrics/{country}")
+def get_metrics(country: str):
+    """SCRUM-10 / SCRUM-26 — Series temporales por país."""
+    if not SessionLocal:
+        raise HTTPException(status_code=503, detail="Base de datos no conectada")
+
+    db = SessionLocal()
+    try:
+        rows = db.execute(
+            text("""
+                SELECT year, region, gym_memberships, fitness_participation_rate,
+                       gym_penetration_rate, gdp_per_capita_usd, obesity_rate
+                FROM gym_metrics
+                WHERE country = :country
+                ORDER BY year
+            """),
+            {"country": country},
+        ).mappings().all()
+
+        if not rows:
+            raise HTTPException(status_code=404, detail=f"País no encontrado: {country}")
+
+        return {
+            "country": country,
+            "region": rows[0]["region"],
+            "total_years": len(rows),
+            "metrics": [dict(r) for r in rows],
+        }
     finally:
         db.close()

@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: gympulse
+      POSTGRES_PASSWORD: gympulse
+      POSTGRES_DB: gympulse_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./app/migrations/001_create_gym_metrics.sql:/docker-entrypoint-initdb.d/001_schema.sql
+
+  api:
+    build: .
+    ports:
+      - "8000:10000"
+    environment:
+      DATABASE_URL: postgresql://gympulse:gympulse@db:5432/gympulse_db
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data:ro
+
+volumes:
+  pgdata:
