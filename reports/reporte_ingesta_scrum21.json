@@ -1,0 +1,11 @@
+{
+  "source_file": "/Users/cpanoh/Documents/cpano-98-local/GitHub/gympulse-ai-backend/data/clean_gym_data.csv",
+  "rows_inserted": 3564,
+  "table": "gym_metrics",
+  "status": "ok",
+  "validation": {
+    "expected_rows": 3564,
+    "db_rows": 3564,
+    "match": true
+  }
+}

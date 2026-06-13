@@ -5,7 +5,9 @@ from pathlib import Path
 import pandas as pd
 from sqlalchemy import create_engine, text
 
-from gympulse.config import DEFAULT_CSV, get_database_url
+from gympulse.config import DEFAULT_CSV, REPORTS_DIR, get_database_url
+
+INGEST_REPORT = REPORTS_DIR / "reporte_ingesta_scrum21.json"
 
 
 def load_csv(csv_path: Path | None = None) -> pd.DataFrame:
@@ -29,7 +31,7 @@ def validate_row_count(engine, table: str, expected: int) -> dict:
 def ingest_to_postgres(
     csv_path: Path | None = None,
     table: str = "gym_metrics",
-    if_exists: str = "append",
+    if_exists: str = "replace",
     validate: bool = True,
 ) -> dict:
     """Carga el CSV en PostgreSQL. Retorna métricas de la operación."""
@@ -60,9 +62,21 @@ def ingest_to_postgres(
     return result
 
 
+def save_ingest_report(result: dict) -> Path:
+    """Persist ingest metrics as JSON evidence (SCRUM-21)."""
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    INGEST_REPORT.write_text(
+        __import__("json").dumps(result, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    return INGEST_REPORT
+
+
 def main() -> None:
     result = ingest_to_postgres()
+    report_path = save_ingest_report(result)
     print(f"Éxito: {result['rows_inserted']} registros insertados en {result['table']}.")
     if "validation" in result:
         v = result["validation"]
         print(f"Validación filas: CSV={v['expected_rows']} BD={v['db_rows']} match={v['match']}")
+    print(f"Reporte: {report_path}")
