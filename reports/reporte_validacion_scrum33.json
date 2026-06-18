@@ -1,0 +1,200 @@
+{
+  "jira_issue": "SCRUM-33",
+  "model": "XGBoost",
+  "train_years": "2001–2022",
+  "val_year_base": 2023,
+  "val_year_target": 2026,
+  "n_train": 2904,
+  "n_val": 132,
+  "best_iteration": 271,
+  "metrics": {
+    "mean_mape_pct": 7.8228,
+    "median_mape_pct": 6.5376,
+    "rmse": 0.012933,
+    "pct_countries_under_6pct": 47.0,
+    "pct_countries_under_10pct": 73.5
+  },
+  "criterion_mape_lt_6pct": false,
+  "criterion_median_lt_6pct": false,
+  "analysis_notes": "Mean MAPE driven up by 22 countries with structural breaks in 2023-2026 (dataset shows >25% penetration jumps not predictable from 2023 features). Stable-country mean MAPE = 6.46%. Median MAPE = 6.54%.",
+  "region_summary": [
+    {
+      "region": "Africa",
+      "mean_ape_pct": 10.73,
+      "median_ape_pct": 7.66,
+      "n_countries": 29
+    },
+    {
+      "region": "Asia",
+      "mean_ape_pct": 3.83,
+      "median_ape_pct": 3.37,
+      "n_countries": 34
+    },
+    {
+      "region": "Europe",
+      "mean_ape_pct": 9.58,
+      "median_ape_pct": 8.68,
+      "n_countries": 40
+    },
+    {
+      "region": "North America",
+      "mean_ape_pct": 6.41,
+      "median_ape_pct": 5.9,
+      "n_countries": 12
+    },
+    {
+      "region": "Oceania",
+      "mean_ape_pct": 10.19,
+      "median_ape_pct": 7.51,
+      "n_countries": 5
+    },
+    {
+      "region": "South America",
+      "mean_ape_pct": 6.68,
+      "median_ape_pct": 5.11,
+      "n_countries": 12
+    }
+  ],
+  "top_20_errors": [
+    {
+      "country": "Nigeria",
+      "region": "Africa",
+      "y_true": 0.0175,
+      "y_pred": 0.026305,
+      "ape_pct": 50.3158
+    },
+    {
+      "country": "Türkiye",
+      "region": "Europe",
+      "y_true": 0.1466,
+      "y_pred": 0.109221,
+      "ape_pct": 25.4973
+    },
+    {
+      "country": "Niger",
+      "region": "Africa",
+      "y_true": 0.007,
+      "y_pred": 0.008591,
+      "ape_pct": 22.7246
+    },
+    {
+      "country": "Papua New Guinea",
+      "region": "Oceania",
+      "y_true": 0.0442,
+      "y_pred": 0.053983,
+      "ape_pct": 22.1338
+    },
+    {
+      "country": "United States of America",
+      "region": "North America",
+      "y_true": 0.3022,
+      "y_pred": 0.237984,
+      "ape_pct": 21.2496
+    },
+    {
+      "country": "Romania",
+      "region": "Europe",
+      "y_true": 0.1231,
+      "y_pred": 0.099789,
+      "ape_pct": 18.9368
+    },
+    {
+      "country": "Madagascar",
+      "region": "Africa",
+      "y_true": 0.0098,
+      "y_pred": 0.011616,
+      "ape_pct": 18.5276
+    },
+    {
+      "country": "Belgium",
+      "region": "Europe",
+      "y_true": 0.2114,
+      "y_pred": 0.172867,
+      "ape_pct": 18.2274
+    },
+    {
+      "country": "Malawi",
+      "region": "Africa",
+      "y_true": 0.0078,
+      "y_pred": 0.009188,
+      "ape_pct": 17.7897
+    },
+    {
+      "country": "France",
+      "region": "Europe",
+      "y_true": 0.1929,
+      "y_pred": 0.158928,
+      "ape_pct": 17.6112
+    },
+    {
+      "country": "Botswana",
+      "region": "Africa",
+      "y_true": 0.0413,
+      "y_pred": 0.047693,
+      "ape_pct": 15.4787
+    },
+    {
+      "country": "Bolivia",
+      "region": "South America",
+      "y_true": 0.0652,
+      "y_pred": 0.075107,
+      "ape_pct": 15.1944
+    },
+    {
+      "country": "Zambia",
+      "region": "Africa",
+      "y_true": 0.0147,
+      "y_pred": 0.016931,
+      "ape_pct": 15.178
+    },
+    {
+      "country": "Tanzania",
+      "region": "Africa",
+      "y_true": 0.0137,
+      "y_pred": 0.015771,
+      "ape_pct": 15.1163
+    },
+    {
+      "country": "Mozambique",
+      "region": "Africa",
+      "y_true": 0.0109,
+      "y_pred": 0.012524,
+      "ape_pct": 14.8996
+    },
+    {
+      "country": "Austria",
+      "region": "Europe",
+      "y_true": 0.195,
+      "y_pred": 0.167252,
+      "ape_pct": 14.2299
+    },
+    {
+      "country": "Spain",
+      "region": "Europe",
+      "y_true": 0.1833,
+      "y_pred": 0.157373,
+      "ape_pct": 14.1446
+    },
+    {
+      "country": "Rwanda",
+      "region": "Africa",
+      "y_true": 0.0105,
+      "y_pred": 0.011972,
+      "ape_pct": 14.0146
+    },
+    {
+      "country": "Poland",
+      "region": "Europe",
+      "y_true": 0.1394,
+      "y_pred": 0.120332,
+      "ape_pct": 13.6785
+    },
+    {
+      "country": "Ethiopia",
+      "region": "Africa",
+      "y_true": 0.0103,
+      "y_pred": 0.011639,
+      "ape_pct": 13.0044
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-.PHONY: install install-dev api quality consistency ingest notebook train
+.PHONY: install install-dev api quality consistency ingest notebook train validate forecast
 
 install:
 	pip install -r requirements.txt
@@ -23,5 +23,11 @@ notebook:
 
 train:
 	PYTHONPATH=. python scripts/train.py
+
+validate:
+	PYTHONPATH=. python scripts/validate.py
+
+forecast:
+	PYTHONPATH=. python scripts/forecast.py
 
 pipeline: quality consistency

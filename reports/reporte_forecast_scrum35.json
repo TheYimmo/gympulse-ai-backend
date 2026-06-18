@@ -1,0 +1,137 @@
+{
+  "jira_issue": "SCRUM-35",
+  "forecast_base_years": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "forecast_target_years": [
+    2026,
+    2027,
+    2028,
+    2029
+  ],
+  "n_countries": 132,
+  "total_projections": 528,
+  "summary_by_target_year": [
+    {
+      "target_year": 2026,
+      "mean_penetration": 0.0972,
+      "min_penetration": 0.0077,
+      "max_penetration": 0.2569,
+      "median_penetration": 0.0843
+    },
+    {
+      "target_year": 2027,
+      "mean_penetration": 0.1025,
+      "min_penetration": 0.0078,
+      "max_penetration": 0.2568,
+      "median_penetration": 0.0904
+    },
+    {
+      "target_year": 2028,
+      "mean_penetration": 0.0987,
+      "min_penetration": 0.0078,
+      "max_penetration": 0.2519,
+      "median_penetration": 0.0861
+    },
+    {
+      "target_year": 2029,
+      "mean_penetration": 0.1076,
+      "min_penetration": 0.0081,
+      "max_penetration": 0.2519,
+      "median_penetration": 0.0986
+    }
+  ],
+  "top5_penetration_by_target_year": {
+    "2026": [
+      {
+        "country": "Australia",
+        "predicted_penetration_rate": 0.256864
+      },
+      {
+        "country": "Norway",
+        "predicted_penetration_rate": 0.251893
+      },
+      {
+        "country": "Netherlands",
+        "predicted_penetration_rate": 0.249679
+      },
+      {
+        "country": "Sweden",
+        "predicted_penetration_rate": 0.246805
+      },
+      {
+        "country": "New Zealand",
+        "predicted_penetration_rate": 0.239009
+      }
+    ],
+    "2027": [
+      {
+        "country": "Netherlands",
+        "predicted_penetration_rate": 0.256826
+      },
+      {
+        "country": "Sweden",
+        "predicted_penetration_rate": 0.256245
+      },
+      {
+        "country": "Denmark",
+        "predicted_penetration_rate": 0.251974
+      },
+      {
+        "country": "Australia",
+        "predicted_penetration_rate": 0.251878
+      },
+      {
+        "country": "Norway",
+        "predicted_penetration_rate": 0.2518
+      }
+    ],
+    "2028": [
+      {
+        "country": "Australia",
+        "predicted_penetration_rate": 0.251878
+      },
+      {
+        "country": "Norway",
+        "predicted_penetration_rate": 0.250874
+      },
+      {
+        "country": "Canada",
+        "predicted_penetration_rate": 0.248421
+      },
+      {
+        "country": "Luxembourg",
+        "predicted_penetration_rate": 0.244123
+      },
+      {
+        "country": "Netherlands",
+        "predicted_penetration_rate": 0.244096
+      }
+    ],
+    "2029": [
+      {
+        "country": "Australia",
+        "predicted_penetration_rate": 0.251855
+      },
+      {
+        "country": "Netherlands",
+        "predicted_penetration_rate": 0.251144
+      },
+      {
+        "country": "Norway",
+        "predicted_penetration_rate": 0.250802
+      },
+      {
+        "country": "Sweden",
+        "predicted_penetration_rate": 0.249554
+      },
+      {
+        "country": "Canada",
+        "predicted_penetration_rate": 0.248519
+      }
+    ]
+  }
+}
