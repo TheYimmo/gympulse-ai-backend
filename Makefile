@@ -1,4 +1,4 @@
-.PHONY: install install-dev api quality consistency ingest notebook
+.PHONY: install install-dev api quality consistency ingest notebook train
 
 install:
 	pip install -r requirements.txt
@@ -20,5 +20,8 @@ consistency:
 
 notebook:
 	cd notebooks && jupyter notebook
+
+train:
+	PYTHONPATH=. python scripts/train.py
 
 pipeline: quality consistency

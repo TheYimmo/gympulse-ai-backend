@@ -10,6 +10,7 @@ DEFAULT_CSV = DATA_DIR / "clean_gym_data.csv"
 QUALITY_REPORT = REPORTS_DIR / "reporte_calidad_scrum9.json"
 CONSISTENCY_MATRIX = REPORTS_DIR / "matriz_consistencia_scrum11.csv"
 CONSISTENCY_SUMMARY = REPORTS_DIR / "reporte_consistencia_scrum11.json"
+MODEL_REPORT = REPORTS_DIR / "reporte_modelo_scrum32.json"
 
 EXPECTED_YEARS = list(range(2000, 2027))
 

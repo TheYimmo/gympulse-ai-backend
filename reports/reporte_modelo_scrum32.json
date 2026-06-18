@@ -1,0 +1,69 @@
+{
+  "jira_issue": "SCRUM-32",
+  "model": "XGBoost",
+  "target": "target_penetration_3y",
+  "horizon_years": 3,
+  "xgboost_params": {
+    "n_estimators": 800,
+    "max_depth": 5,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3,
+    "gamma": 0.0,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "best_iteration": 347,
+  "metrics": {
+    "train": {
+      "split": "train",
+      "n_samples": 2772,
+      "mape_pct": 6.178,
+      "rmse": 0.004387
+    },
+    "val": {
+      "split": "val",
+      "n_samples": 132,
+      "mape_pct": 11.9812,
+      "rmse": 0.022612
+    },
+    "test": {
+      "split": "test",
+      "n_samples": 132,
+      "mape_pct": 7.5672,
+      "rmse": 0.013809
+    }
+  },
+  "feature_importances": {
+    "year": 0.0034000000450760126,
+    "gym_penetration_rate": 0.12470000237226486,
+    "gym_penetration_rate_lag1": 0.060600001364946365,
+    "gym_penetration_rate_lag2": 0.13439999520778656,
+    "penetration_rolling_mean3": 0.6557000279426575,
+    "penetration_yoy_change": 0.0017000000225380063,
+    "covid_indicator": 0.00139999995008111,
+    "gdp_per_capita_usd": 0.0008999999845400453,
+    "gdp_growth_rate": 0.0010999999940395355,
+    "urban_population_percentage": 0.0006000000284984708,
+    "obesity_rate": 0.000699999975040555,
+    "fitness_participation_rate": 0.0008999999845400453,
+    "insufficient_physical_activity_pct": 0.0006000000284984708,
+    "average_membership_cost_usd": 0.01080000028014183,
+    "population_total": 0.0008999999845400453,
+    "region_encoded": 0.001500000013038516
+  },
+  "region_encoding": {
+    "Africa": 0,
+    "Asia": 1,
+    "Europe": 2,
+    "North America": 3,
+    "Oceania": 4,
+    "South America": 5
+  },
+  "mape_val_pct": 11.9812,
+  "mape_test_pct": 7.5672,
+  "criterio_superado": false
+}
