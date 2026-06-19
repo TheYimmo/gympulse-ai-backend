@@ -1,11 +1,21 @@
-"""SCRUM-6 / SCRUM-10 — FastAPI entrypoint."""
+"""SCRUM-6 / SCRUM-10 / SCRUM-34 — FastAPI entrypoint."""
 
 from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 
 from app.database import SessionLocal, init_db, ping_database
+from app.routers import predict
 
-app = FastAPI(title="GymPulse AI - Sprint 1", version="1.0")
+app = FastAPI(
+    title="GymPulse AI",
+    version="2.0",
+    description=(
+        "API de análisis y predicción de penetración de gimnasios a nivel global. "
+        "Sprint 2: modelo XGBoost con horizonte de 3 años para 132 países."
+    ),
+)
+
+app.include_router(predict.router)
 
 init_db()
 
@@ -14,10 +24,11 @@ init_db()
 def read_root():
     return {
         "proyecto": "GymPulse AI",
-        "sprint": 1,
+        "sprint": 2,
         "equipo": 31,
         "estado": "Operativo",
         "documentacion": "Navega a /docs para interactuar con la API",
+        "endpoints_ml": ["/predict/penetration", "/predict/countries", "/predict/penetration/batch"],
     }
 
 
