@@ -1,4 +1,4 @@
-.PHONY: install install-dev api quality consistency ingest notebook train validate forecast
+.PHONY: install install-dev api dashboard quality consistency ingest notebook train validate forecast
 
 install:
 	pip install -r requirements.txt
@@ -8,6 +8,9 @@ install-dev:
 
 api:
 	uvicorn main:app --reload --port 8000
+
+dashboard:
+	PYTHONPATH=. streamlit run dashboard/app.py --server.port 8501
 
 ingest:
 	python scripts/ingest.py

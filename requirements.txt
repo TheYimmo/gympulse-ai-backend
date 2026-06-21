@@ -5,3 +5,6 @@ psycopg2-binary
 pandas
 xgboost
 scikit-learn
+streamlit
+plotly
+requests
