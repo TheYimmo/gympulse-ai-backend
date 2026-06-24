@@ -7,10 +7,10 @@ install-dev:
 	pip install -r requirements-dev.txt
 
 api:
-	uvicorn main:app --reload --port 8000
+	PYTHONPATH=. .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8080
 
 dashboard:
-	PYTHONPATH=. streamlit run dashboard/app.py --server.port 8501
+	GYMPULSE_API_URL=http://localhost:8080 PYTHONPATH=. .venv/bin/streamlit run dashboard/app.py --server.port 8501
 
 ingest:
 	python scripts/ingest.py

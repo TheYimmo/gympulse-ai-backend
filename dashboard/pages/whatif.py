@@ -86,7 +86,7 @@ def render() -> None:
         showlegend=False,
         plot_bgcolor="white",
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # Detail table
     st.markdown("### Detalle del escenario")
@@ -108,7 +108,7 @@ def render() -> None:
             f"{impact['penetration_delta_pct']:+.2f}%",
         ],
     })
-    st.dataframe(detail, use_container_width=True, hide_index=True)
+    st.dataframe(detail, width="stretch", hide_index=True)
 
     # CSV export
     st.divider()

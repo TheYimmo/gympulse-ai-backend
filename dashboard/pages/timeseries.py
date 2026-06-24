@@ -117,7 +117,7 @@ def render() -> None:
         height=460,
         legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "xanchor": "right", "x": 1},
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     if not history.empty:
         with st.expander("Ver datos históricos completos"):
@@ -125,7 +125,7 @@ def render() -> None:
             display["penetration_rate"] = display["penetration_rate"].apply(lambda x: f"{x:.4%}")
             st.dataframe(
                 display.rename(columns={"year": "Año", "penetration_rate": "Penetración"}),
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 
@@ -135,6 +135,6 @@ def render() -> None:
             disp["penetration_rate"] = disp["penetration_rate"].apply(lambda x: f"{x:.4%}")
             st.dataframe(
                 disp.rename(columns={"year": "Año objetivo", "penetration_rate": "Penetración predicha"}),
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )

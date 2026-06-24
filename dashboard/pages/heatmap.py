@@ -71,7 +71,7 @@ def render() -> None:
         height=520,
         coloraxis_colorbar={"title": color_label, "tickformat": ".2%" if "Cambio" not in metric else ".1f"},
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.divider()
     k1, k2, k3, k4 = st.columns(4)
@@ -93,4 +93,4 @@ def render() -> None:
     top10["Penetración actual"] = top10["Penetración actual"].apply(lambda x: f"{x:.3%}")
     top10["Penetración predicha"] = top10["Penetración predicha"].apply(lambda x: f"{x:.3%}")
     top10["Cambio %"] = top10["Cambio %"].apply(lambda x: f"{x:+.1f}%")
-    st.dataframe(top10, use_container_width=True)
+    st.dataframe(top10, width="stretch")

@@ -167,7 +167,7 @@ def render() -> None:
     disp_pen["Penetración actual"] = disp_pen["Penetración actual"].apply(lambda x: f"{x:.3%}")
     disp_pen["Penetración predicha"] = disp_pen["Penetración predicha"].apply(lambda x: f"{x:.3%}")
     disp_pen["Cambio %"] = disp_pen["Cambio %"].apply(lambda x: f"{x:+.1f}%")
-    st.dataframe(disp_pen, use_container_width=True)
+    st.dataframe(disp_pen, width="stretch")
 
     fig = px.bar(
         top5_pen,
@@ -178,7 +178,7 @@ def render() -> None:
         labels={"country": "País", "predicted_penetration_rate": "Tasa de penetración", "region": "Región"},
     )
     fig.update_layout(yaxis_tickformat=".2%", height=340, xaxis_title="")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.markdown("### 🚀 Top 5 — Mayor Crecimiento Proyectado")
     disp_growth = top5_growth.copy()
@@ -187,7 +187,7 @@ def render() -> None:
     disp_growth["Penetración actual"] = disp_growth["Penetración actual"].apply(lambda x: f"{x:.3%}")
     disp_growth["Penetración predicha"] = disp_growth["Penetración predicha"].apply(lambda x: f"{x:.3%}")
     disp_growth["Cambio %"] = disp_growth["Cambio %"].apply(lambda x: f"{x:+.1f}%")
-    st.dataframe(disp_growth, use_container_width=True)
+    st.dataframe(disp_growth, width="stretch")
 
     st.divider()
     summary = _generate_summary(df, year)
