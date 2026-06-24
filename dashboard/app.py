@@ -9,13 +9,14 @@ st.set_page_config(
 )
 
 import dashboard.api as api
-from dashboard.pages import heatmap, home, timeseries, whatif
+from dashboard.pages import heatmap, home, reports, timeseries, whatif
 
 _PAGES = {
     "🏠  Inicio": home,
     "🗺️  Mapa de Calor Global": heatmap,
     "📈  Series Temporales": timeseries,
     "🔬  Simulador What-If": whatif,
+    "📊  Reportes Ejecutivos": reports,
 }
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
