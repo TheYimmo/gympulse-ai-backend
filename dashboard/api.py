@@ -49,3 +49,15 @@ def predict_batch(
 
 def country_metrics(country: str) -> dict:
     return _get(f"/metrics/{country}")
+
+
+def predict_whatif(
+    country: str,
+    year: int = 2023,
+    gdp_delta_pct: float = 0.0,
+    obesity_delta_pct: float = 0.0,
+) -> dict:
+    return _get(
+        "/predict/whatif",
+        {"country": country, "year": year, "gdp_delta_pct": gdp_delta_pct, "obesity_delta_pct": obesity_delta_pct},
+    )

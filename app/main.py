@@ -4,18 +4,19 @@ from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 
 from app.database import SessionLocal, init_db, ping_database
-from app.routers import predict
+from app.routers import predict, whatif
 
 app = FastAPI(
     title="GymPulse AI",
-    version="2.0",
+    version="3.0",
     description=(
         "API de análisis y predicción de penetración de gimnasios a nivel global. "
-        "Sprint 2: modelo XGBoost con horizonte de 3 años para 132 países."
+        "Sprint 3: dashboard ejecutivo Streamlit + simulador económico What-If."
     ),
 )
 
 app.include_router(predict.router)
+app.include_router(whatif.router)
 
 init_db()
 
@@ -28,7 +29,7 @@ def read_root():
         "equipo": 31,
         "estado": "Operativo",
         "documentacion": "Navega a /docs para interactuar con la API",
-        "endpoints_ml": ["/predict/penetration", "/predict/countries", "/predict/penetration/batch"],
+        "endpoints_ml": ["/predict/penetration", "/predict/countries", "/predict/penetration/batch", "/predict/whatif"],
     }
 
 
